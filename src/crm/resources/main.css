@@ -1,0 +1,75 @@
+.root
+{
+    colorBackground: rgba(183, 216, 41, 1);
+    colorBackground2: rgba(183, 216, 41, 0.5);
+    colorAccent: rgba(55, 28, 30, 1);
+    colorAccentLight: rgba(159, 80, 9, 1);
+    rgbBackground: radial-gradient(center 50% 50%, radius 50%, colorBackground2, colorBackground);
+}
+
+.mainFxmlClass
+{
+    -fx-background-color: rgbBackground;
+}
+
+.lblAccent
+{
+    -fx-background-color: colorAccent;
+    -fx-font-family: "Tahoma";
+    -fx-text-fill: white;
+    -fx-padding: 0;
+    -fx-alignment: CENTER;
+}
+
+.lblHeader
+{
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: colorAccent;
+    -fx-font-weight: bold;
+    -fx-font-size: 22;
+}
+
+.tbHeader
+{
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: colorAccent;
+    -fx-font-weight: bold;
+    -fx-font-size: 22;
+    -fx-underline: true;
+    -fx-alignment: CENTER;
+}
+
+Label
+{
+    -fx-text-fill: colorAccent;
+    -fx-font-family: "Segoe Print";
+    -fx-alignment: BASELINE_RIGHT;
+    -fx-min-width: 100;
+}
+
+CheckBox
+{
+    -fx-font-family: "Segoe Print";
+    -fx-text-fill: colorAccent;
+}
+
+Button
+{
+    -fx-text-fill: white;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-border-width: 1;
+    -fx-border-color: colorAccent;
+    -fx-background-color: linear-gradient(to bottom, colorAccentLight, colorAccent 15%);
+    -fx-padding: 2;
+}
+
+Button:hover
+{
+    -fx-text-fill: blanchedalmond;
+}
+
+.table-view .column-header-background .filtered
+{
+    -fx-background-color: linear-gradient(to bottom, rgba(251, 189, 33, 0), rgba(255, 251, 189, 33));
+}

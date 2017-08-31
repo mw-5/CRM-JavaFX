@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="crm.windows.frmCustomer.FrmCustomerController">
+    <stylesheets>
+        <URL value="@frmcustomer.css"/>
+    </stylesheets>
+    <children>
+        <TextField fx:id="txtCid" editable="false" layoutX="151.0" layoutY="42.0" />
+        <Label fx:id="lblCid" layoutX="14.0" layoutY="46.0" prefHeight="17.0" prefWidth="132.0" text="_Cid" />
+        <TextField fx:id="txtCompany" layoutX="151.0" layoutY="76.0" />
+        <TextField fx:id="txtAddress" layoutX="151.0" layoutY="109.0" />
+        <TextField fx:id="txtZip" layoutX="151.0" layoutY="142.0" />
+        <TextField fx:id="txtCity" layoutX="151.0" layoutY="175.0" />
+        <TextField fx:id="txtCountry" layoutX="151.0" layoutY="209.0" />
+        <TextField fx:id="txtContractId" layoutX="151.0" layoutY="244.0" />
+        <DatePicker fx:id="txtContractDate" layoutX="151.0" layoutY="276.0" />
+        <Button fx:id="btnSubmit" layoutX="200.0" layoutY="314.0" mnemonicParsing="false" onAction="#submit" text="_Submit" />
+        <Label fx:id="lblCompany" layoutX="14.0" layoutY="80.0" prefWidth="132.0" text="_Company" />
+        <Label fx:id="lblAddress" layoutX="14.0" layoutY="113.0" prefWidth="132.0" text="_Address" />
+        <Label fx:id="lblZip" layoutX="14.0" layoutY="146.0" prefWidth="132.0" text="_Zip" />
+        <Label fx:id="lblCity" layoutX="14.0" layoutY="179.0" prefWidth="132.0" text="_City" />
+        <Label fx:id="lblCountry" layoutX="14.0" layoutY="213.0" prefWidth="132.0" text="_Country" />
+        <Label fx:id="lblContractId" layoutX="14.0" layoutY="248.0" prefWidth="132.0" text="_ContractId" />
+        <Label fx:id="lblContractDate" layoutX="14.0" layoutY="280.0" prefWidth="132.0" text="_ContractDate" />
+    </children>
+</AnchorPane>

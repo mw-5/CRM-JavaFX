@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="crm.pages.cockpit.CockpitController">
+    <stylesheets>
+        <URL value="@cockpit.css"/>
+    </stylesheets>
+    <children>
+        <Button fx:id="btnGoToStart" layoutX="41.0" layoutY="34.0" mnemonicParsing="false" onAction="#navToStart" prefWidth="75.0" text="_GoToStart" />
+        <Button fx:id="btnGoToListOfCustomers" layoutX="119.0" layoutY="34.0" mnemonicParsing="false" onAction="#navToListOfCustomers" prefWidth="148.0" text="_GoToListOfCustomers" />
+        <Label fx:id="lblCompanyValue" layoutX="303.0" layoutY="24.0" prefHeight="45.0" prefWidth="620.0" styleClass="lblHeader" text="Label" />
+        <TextField fx:id="txtSearchBox" layoutX="45.0" layoutY="69.0" />
+        <Button fx:id="btnSearch" layoutX="194.0" layoutY="69.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="23.0" stylesheets="@cockpit.css" text="" />
+        <GridPane gridLinesVisible="true" layoutX="41.0" layoutY="118.0" prefHeight="143.0" prefWidth="429.0" styleClass="lblAccent">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="171.0" minWidth="10.0" prefWidth="95.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="309.0" minWidth="10.0" prefWidth="309.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label fx:id="lblCid" alignment="CENTER" styleClass="lblAccent" text="_Cid" />
+                <Label fx:id="lblAddress" styleClass="lblAccent" text="_Address" GridPane.rowIndex="1" />
+                <Label fx:id="lblZip" styleClass="lblAccent" text="_Zip" GridPane.rowIndex="2" />
+                <Label fx:id="lblCity" styleClass="lblAccent" text="_City" GridPane.rowIndex="3" />
+                <Label fx:id="lblCountry" styleClass="lblAccent" text="_Country" GridPane.rowIndex="4" />
+                <Label fx:id="lblContractId" styleClass="lblAccent" text="_ContractId" GridPane.rowIndex="5" />
+                <Label fx:id="lblContractDate" styleClass="lblAccent" text="_ContractDate" GridPane.rowIndex="6" />
+                <Label fx:id="lblCidValue" styleClass="lblAccent" text="Label" GridPane.columnIndex="1">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="lblAddressValue" styleClass="lblAccent" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label fx:id="lblZipValue" styleClass="lblAccent" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label fx:id="lblCityValue" styleClass="lblAccent" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label fx:id="lblCountryValue" styleClass="lblAccent" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label fx:id="lblContractIdValue" styleClass="lblAccent" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Label fx:id="lblContractDateValue" styleClass="lblAccent" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            </children>
+        </GridPane>
+        <TableView fx:id="tvContactPersons" layoutX="488.0" layoutY="118.0" prefHeight="143.0" prefWidth="549.0">
+            <columns>
+                <TableColumn fx:id="colCpId" editable="false" prefWidth="80" text="_Id" visible="false" />
+                <TableColumn fx:id="colCpCid" editable="false" prefWidth="80" text="_Cid" visible="false" />
+                <TableColumn fx:id="colForename" editable="false" prefWidth="80" text="_Forename" />
+                <TableColumn fx:id="colSurname" editable="false" prefWidth="80" text="_Surname" />
+                <TableColumn fx:id="colGender" editable="false" prefWidth="69.0" text="_Gender" styleClass="colHeader" />
+                <TableColumn fx:id="colEmail" editable="false" prefWidth="160.0" text="_Email" styleClass="colHeader" />
+                <TableColumn fx:id="colPhone" editable="false" prefWidth="158.0" text="_Phone" />
+                <TableColumn fx:id="colMainContact" editable="false" prefWidth="80" text="_Id" visible="false" />
+            </columns>
+        </TableView>
+        <Button fx:id="btnNewContactPerson" layoutX="1037.0" layoutY="145.0" mnemonicParsing="false" onAction="#openNewContactPerson" prefWidth="134.0" text="_NewContactPerson" />
+        <Button fx:id="btnEditContactPerson" layoutX="1037.0" layoutY="177.0" mnemonicParsing="false" onAction="#openEditContactPerson" prefWidth="134.0" text="_EditContactPerson" />
+        <TableView fx:id="tvNotes" layoutX="40.0" layoutY="292.0" prefHeight="240.0" prefWidth="997.0">
+            <columns>
+                <TableColumn fx:id="colNoteId" editable="false" prefWidth="80" text="_Id" visible="false" />
+                <TableColumn fx:id="colNoteCid" editable="false" prefWidth="80" text="_Cid" visible="false" />
+                <TableColumn fx:id="colCreatedBy" editable="false" prefWidth="80" text="_CreatedBy" />
+                <TableColumn fx:id="colEntryDate" editable="false" prefWidth="80" text="_EntryDate" />
+                <TableColumn fx:id="colCategory" editable="false" prefWidth="80" text="_Category" />
+                <TableColumn fx:id="colMemo" editable="false" prefWidth="640" text="_Memo" />
+                <TableColumn fx:id="colAttachment" editable="false" minWidth="0.0" prefWidth="115.0" text="_Attachment" />
+            </columns>
+        </TableView>
+        <Button fx:id="btnNewNote" layoutX="1037.0" layoutY="316.0" mnemonicParsing="false" onAction="#openNewNote" prefWidth="134.0" text="_NewNote" />
+        <Button fx:id="btnEditNote" layoutX="1037.0" layoutY="348.0" mnemonicParsing="false" onAction="#openEditNote" prefWidth="134.0" text="_EditNote" />
+        <Button fx:id="btnOpenCustomerFolder" layoutX="1037.0" layoutY="379.0" mnemonicParsing="false" onAction="#openCustomerFolder" prefWidth="134.0" text="_OpenCustomerFolder" />
+    </children>
+</AnchorPane>

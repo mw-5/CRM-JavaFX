@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="crm.windows.frmContactPerson.FrmContactPersonController">
+    <stylesheets>
+        <URL value="@frmcontactperson.css"/>
+    </stylesheets>
+    <children>
+        <TextField fx:id="txtForename" layoutX="113.0" layoutY="67.0" prefHeight="23.0" prefWidth="120.0" />
+        <TextField fx:id="txtSurname" layoutX="113.0" layoutY="98.0" prefHeight="23.0" prefWidth="120.0" />
+        <ComboBox fx:id="cmbGender" layoutX="113.0" layoutY="130.0" prefHeight="23.0" prefWidth="120.0" />
+        <TextField fx:id="txtEmail" layoutX="113.0" layoutY="162.0" prefHeight="23.0" prefWidth="120.0" />
+        <TextField fx:id="txtPhone" layoutX="113.0" layoutY="193.0" prefHeight="23.0" prefWidth="120.0" />
+        <Label fx:id="lblForename" layoutX="14.0" layoutY="71.0" prefHeight="17.0" prefWidth="92.0" text="_forename" />
+        <Label fx:id="lblSurname" layoutX="14.0" layoutY="102.0" prefWidth="92.0" text="_surname" />
+        <Label fx:id="lblGender" layoutX="14.0" layoutY="134.0" prefWidth="92.0" text="_gender" />
+        <Label fx:id="lblEmail" layoutX="14.0" layoutY="166.0" prefWidth="92.0" text="_email" />
+        <Label fx:id="lblPhone" layoutX="14.0" layoutY="197.0" prefWidth="92.0" text="_phone" />
+        <CheckBox fx:id="cbMainContact" layoutX="113.0" layoutY="229.0" mnemonicParsing="false" text="_maincontact" />
+        <Button fx:id="btnSubmit" layoutX="113.0" layoutY="279.0" mnemonicParsing="false" onAction="#submit" prefWidth="75.0" text="_submit" />
+    </children>
+</AnchorPane>

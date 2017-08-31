@@ -1,0 +1,6 @@
+@import "../../resources/main.css";
+
+Label
+{
+    -fx-alignment: CENTER !important;
+}
